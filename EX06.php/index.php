@@ -2,10 +2,12 @@
 
 
 $price = 99.99;
-$price_decimal = number_format($price, 2, ".", ",");
+$price_decimal = number_format($price, 2, ",", ".");
+
 const IVA = 0.21;
-$total = round($price * ( 1 + IVA ), 2);
-$total_decimal = number_format($total, 2, ".", ",");
+$IVA_decimal = number_format($price * IVA, 4, ",", ".");
+$total = $price * ( 1 + IVA );
+$total_decimal = number_format($total, 2, ",", ".");
 
 $stock = 134;
 $ref = "PIK-123456789";
@@ -13,9 +15,6 @@ $ref = "PIK-123456789";
 const SHOP_NAME = "PokeMerch";
 const CURRENCY = "€";
 const PARTNER_DISCOUNT = 0.02;
-
-
-
 
 ?>
 <!DOCTYPE html>
@@ -37,7 +36,7 @@ const PARTNER_DISCOUNT = 0.02;
             <h2>Figura Pikachu</h2>
             <p class="desc">Figurita de tamaño medio de un pikachu</p>
             <p class="price">Preu sense IVA: <?= "$price_decimal " . CURRENCY?></p>
-            <p class="price">IVA (21%): <?= round( $price_decimal * IVA, 2 ) . ' ' . CURRENCY ?></p>
+            <p class="price">IVA (21%): <?= $IVA_decimal . ' ' . CURRENCY ?></p>
             <p class="price">TOTAL: <?= $total_decimal . ' ' . CURRENCY?> </p>
 
             <p class="stock">Unitats disponibles: <?= $stock ?> / 300</p>
@@ -45,9 +44,12 @@ const PARTNER_DISCOUNT = 0.02;
 
         </article>
 
+        <!-- ERROR FORZADO AL CAMBAIR LA CONSTANTE -->
+        <?php #echo PARTNER_DISCOUNT = 199 ?>
+
         <footer>
             <p>Footer de PokeMerch</p>
-        </footer>
+    </footer>
     </main>
 </body>
 </html>
