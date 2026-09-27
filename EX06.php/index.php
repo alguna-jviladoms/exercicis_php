@@ -13,7 +13,7 @@ $stock = 134;
 $ref = "PIK-123456789";
 
 const SHOP_NAME = "PokeMerch";
-const CURRENCY = "€";
+const CURRENCY = "€"; 
 const PARTNER_DISCOUNT = 0.02;
 
 ?>
