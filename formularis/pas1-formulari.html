@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari pas 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <h1>Inscripció al festival</h1>
+    <!-- action: dónde van los datos -->
+    <!-- method: como van ( GET o POST ) -->
+    <form action="pas1-resultat.php" method="post">
+        <label for="name">Nom:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+
+        <label for="day">Dia: </label>
+        <select name="day" id="day">
+            <option value="friday">Divendres</option>
+            <option value="saturday">Dissabte</option>
+        </select>
+        <button>Inscriure'm</button>
+    </form>
+</body>
+</html>
