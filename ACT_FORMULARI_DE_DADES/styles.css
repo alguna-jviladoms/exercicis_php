@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px 25px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 6px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.fieldsetButtons {
+    margin-top: 15px;
+}
+
+.fieldsetButtons div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.fieldsetButtons div p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.fieldsetButtons label {
+    display: inline;
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+table th {
+    background-color: #3b82f6;
+    color: #ffffff;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #2f6fd0;
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Files alternes */
+table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #eef3fb;
+}
+
+table tbody tr:hover {
+    background-color: #dbe7fb;
+}
