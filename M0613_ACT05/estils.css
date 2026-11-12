@@ -1,0 +1,167 @@
+/* Full d'estils compartit per totes les pagines de l'ACT05 */
+:root {
+    --fosc: #17152b;
+    --violeta: #33245c;
+    --turquesa: #39d9c8;
+    --fons: #f0eef8;
+    --text: #29263d;
+    --vora: #d8d2ea;
+    --verd: #16866f;
+    --taronja: #bd7118;
+    --vermell: #b33a5e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    color: var(--text);
+    background: var(--fons);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(120deg, var(--fosc), var(--violeta));
+    color: #fff;
+    padding: 2.5rem 2rem;
+    border-bottom: 5px solid var(--turquesa);
+    box-shadow: 0 8px 20px rgba(23, 21, 43, .2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    letter-spacing: -.04em;
+}
+
+header p {
+    margin: .5rem 0 0;
+    color: #dcd7f0;
+}
+
+main {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h2 {
+    color: var(--violeta);
+    border-left: 5px solid var(--turquesa);
+    padding: .35rem 0 .35rem .8rem;
+    margin: 2.5rem 0 1rem;
+    background: rgba(57, 217, 200, .08);
+}
+
+footer {
+    background: var(--fosc);
+    color: #dcd7f0;
+    text-align: center;
+    padding: 1.25rem;
+    margin-top: 2rem;
+    font-size: .85rem;
+}
+
+/* Graella de targetes */
+.graella {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.25rem;
+    margin: 1.25rem 0;
+}
+
+.targeta {
+    background: #fff;
+    border: 1px solid var(--vora);
+    border-radius: 14px;
+    padding: 1.25rem;
+    box-shadow: 0 8px 18px rgba(51, 36, 92, .08);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.targeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 26px rgba(51, 36, 92, .16);
+}
+
+.targeta h3 {
+    margin: 0 0 .35rem;
+    color: var(--violeta);
+    font-size: 1.1rem;
+}
+
+.targeta .categoria {
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #756d8d;
+    margin: 0;
+}
+
+.targeta .preu {
+    color: var(--violeta);
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin: .7rem 0;
+}
+
+.targeta .estat {
+    font-size: .9rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.estat-disponible {
+    color: var(--verd);
+}
+
+.estat-ultimes {
+    color: var(--taronja);
+}
+
+.estat-esgotat {
+    color: var(--vermell);
+}
+
+/* Resum i missatges */
+.resum {
+    background: #fff;
+    border: 1px solid var(--vora);
+    border-radius: 14px;
+    padding: .8rem 1.25rem;
+    box-shadow: 0 8px 18px rgba(51, 36, 92, .07);
+}
+
+.resum dt {
+    font-weight: 800;
+    color: var(--violeta);
+    margin-top: .7rem;
+}
+
+.resum dd {
+    margin: 0 0 .35rem;
+}
+
+.missatge {
+    background: #e4faf6;
+    border: 1px solid #a9e9df;
+    border-left: 5px solid var(--turquesa);
+    padding: .85rem 1rem;
+    border-radius: 8px;
+}
+
+.error {
+    background: #fce8ee;
+    border-color: #efb4c5;
+    border-left-color: var(--vermell);
+}
+
+code {
+    background: #e4e0f0;
+    color: var(--violeta);
+    padding: .15rem .4rem;
+    border-radius: 5px;
+}
